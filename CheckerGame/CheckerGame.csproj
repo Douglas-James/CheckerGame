@@ -6,4 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Pages\Template.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pages\Template.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>Template.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\Template.cs">
+      <DependentUpon>Template.cshtml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
